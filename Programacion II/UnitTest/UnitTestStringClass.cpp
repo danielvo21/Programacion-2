@@ -50,6 +50,13 @@ namespace UnitTest
 
 			Assert::IsTrue(s1 != s2);
 		}
+		/*
+		TEST_METHOD(TestClean)
+		{
+			String s1;
+
+			Assert::AreEqual(s1 != s2);
+		}*/
 
 	};
 }
