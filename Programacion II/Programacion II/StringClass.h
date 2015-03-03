@@ -33,6 +33,8 @@ public:
 //Function
 	void clear();
 	int length() const;
+	char* getString() const;
+	int String::capacity() const;
 
 };
 

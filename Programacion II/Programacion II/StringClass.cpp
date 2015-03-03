@@ -88,14 +88,6 @@ const String& String::operator = (const String &a)
 	return (*this);
 }
 
-/*
-char*  String::operator +(const char* c) const
-{
-	int new_lng = strlen(c) + length(cadena);
-	new char = cadena_tmp[new_lng];
-
-};
-*/
 
 void String::clear()
 {
@@ -111,3 +103,15 @@ void String::clear()
 {
 	return strlen(cadena);
 }
+
+char* String::getString() const
+ {
+	 return cadena;
+ }
+
+int String::capacity() const
+{
+	return (sizeof(lng));
+}
+
+ 
