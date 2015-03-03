@@ -37,5 +37,19 @@ namespace UnitTest
 			Assert::AreEqual(s2.getString(), "hola");
 		}
 		
+		TEST_METHOD(TestStringIsEqual)
+		{
+			String s1("hola"), s2 ("hola");
+			
+			Assert::IsTrue(s1 == s2);
+		}
+
+		TEST_METHOD(TestStringIsNotEqual)
+		{
+			String s1("hola"), s2("adios");
+
+			Assert::IsTrue(s1 != s2);
+		}
+
 	};
 }
