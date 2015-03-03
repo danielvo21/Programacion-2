@@ -1,28 +1,29 @@
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
-#include "String.h"
+#include "StringClass.h"
 
-int String::string(){
+
+String::String(){
 	lng = 1;
 	cadena = new char[lng];
 	cadena[0] = '\0';
-	return 0;
+	
 	}
 
-int String::string(const char* c){
+String::String(const char* c){
 	lng = strlen (c) + 1;
 	cadena = new char[lng];
 	strcpy_s(cadena, lng, c);
-	return 0;
+
 }
 
-int String::string(const String &a){
+String::String(const String &a){
 	lng = strlen(a.cadena)+1;
 	cadena = new char[lng];
 	strcpy_s(cadena,lng+1, a.cadena);
-	return 0;
-};
+	
+}
 
 //Comparation
 bool String::operator == (const char* c) const
@@ -30,27 +31,25 @@ bool String::operator == (const char* c) const
 	if (strcmp(cadena, c) == 0){ return 1; }
 	else return 0;
 	//return strcmp(cadena, c) == 0;	
-};
-/*
-bool String::operator == (const String &a)
-{
-	if (strcmp(a.cadena, cadena) == 0){ return 1; }
-	else return 0;
 }
-*/
 
-bool String::operator != (const char* c) const
+bool String::operator == (const String &a) const
+{
+	return(strcmp(a.cadena, cadena) == 0);
+}
+
+bool String::operator != (const char* c) 
 {
 	if (strcmp(cadena, c) == 0){ return 0; }
 	else return 1;
 	//return strcmp(cadena, c) != 0;
-};
-/*
+}
+
 bool String::operator != (const String &a)
 {
 	return strcmp(a.cadena, cadena) != 0;
 }
-*/
+
 
 const String& String::operator = (const char* c)
 {

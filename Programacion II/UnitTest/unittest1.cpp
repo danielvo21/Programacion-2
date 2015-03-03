@@ -30,6 +30,17 @@ namespace UnitTest
 			Assert::AreEqual(p.x, -2.0f);
 			Assert::AreEqual(p.y, +3.0f);
 		}
+		TEST_METHOD(TestDistance)
+		{
+			Vector2Df p1, p2;
+
+			p1.x = 7.0f, p1.y = 3.0f;
+			p2.x = 3.0f, p2.y = 0.0f;
+
+			Assert::AreEqual(p1.distance(p2), 5.0f);
+
+		}
+
 		//Unit test operators
 		TEST_METHOD(TestSuma)
 		{
@@ -84,7 +95,6 @@ namespace UnitTest
 		}
 
 		//Unit test comparation
-
 		TEST_METHOD(TestEqual)
 		{
 			Vector2Df v1, v2, v3, v4, v5, v6;
@@ -94,13 +104,13 @@ namespace UnitTest
 			
 			Assert::IsTrue(v1 == v2);
 
-			v1.x = 3.0f, v1.y = 3.0f;
-			v2.x = 2.0f, v2.y = 3.0f;
+			v3.x = 3.0f, v3.y = 3.0f;
+			v4.x = 2.0f, v4.y = 3.0f;
 
 			Assert::IsFalse(v3 == v4);
 
-			v1.x = 3.0f, v1.y = 4.0f;
-			v2.x = 2.0f, v2.y = 3.0f;
+			v5.x = 3.0f, v5.y = 4.0f;
+			v6.x = 2.0f, v6.y = 3.0f;
 
 			Assert::IsFalse(v5 == v6);
 			
@@ -116,13 +126,13 @@ namespace UnitTest
 
 			Assert::IsFalse(v1 != v2);
 
-			v1.x = 3.0f, v1.y = 3.0f;
-			v2.x = 2.0f, v2.y = 3.0f;
+			v3.x = 3.0f, v3.y = 3.0f;
+			v4.x = 2.0f, v4.y = 3.0f;
 
 			Assert::IsTrue(v3 != v4);
 
-			v1.x = 3.0f, v1.y = 4.0f;
-			v2.x = 2.0f, v2.y = 3.0f;
+			v5.x = 3.0f, v5.y = 4.0f;
+			v6.x = 2.0f, v6.y = 3.0f;
 
 			Assert::IsTrue(v5 != v6);
 

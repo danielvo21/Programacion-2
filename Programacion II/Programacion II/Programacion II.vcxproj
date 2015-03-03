@@ -67,14 +67,14 @@
     <Text Include="Code Style.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="String.h" />
+    <ClInclude Include="StringClass.h" />
     <ClInclude Include="Vector2Df.h" />
     <ClInclude Include="Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="String.cpp" />
+    <ClCompile Include="StringClass.cpp" />
     <ClCompile Include="Vector2Df.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
