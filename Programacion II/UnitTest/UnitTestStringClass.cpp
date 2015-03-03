@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
+#include "..\Programacion II\StringClass.h"
+#include "..\Programacion II\StringClass.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -9,10 +11,31 @@ namespace UnitTest
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(TestString)
 		{
-			// TODO: Your test code here
-		}
+			String s;
 
+			Assert::AreEqual(s.length(), 0);
+
+		}
+		
+		TEST_METHOD(TestStringChar)
+		{
+			String s("hola");
+
+			Assert::AreEqual(s.length(), 4);
+
+			Assert::AreEqual(s.getString(), "hola");
+		}
+			
+		TEST_METHOD(TestStringString)
+		{
+			String s1("hola");
+
+			String s2(s1);
+
+			Assert::AreEqual(s2.getString(), "hola");
+		}
+		
 	};
 }
