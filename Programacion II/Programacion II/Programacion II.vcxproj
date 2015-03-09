@@ -67,11 +67,13 @@
     <Text Include="Code Style.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LinkedList.h" />
     <ClInclude Include="StringClass.h" />
     <ClInclude Include="Vector2Df.h" />
     <ClInclude Include="Log.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="StringClass.cpp" />
